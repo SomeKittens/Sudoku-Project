@@ -1,0 +1,4 @@
+Next steps:
+-Add Iterator class to Solver.  Hopefully this will reduce the number of for loops.
+-Determine why it's still failing with a difficulty of 35
+-Add visualization
