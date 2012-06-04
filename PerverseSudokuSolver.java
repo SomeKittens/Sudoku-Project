@@ -23,6 +23,7 @@ public class PerverseSudokuSolver
 	 */
 	public PerverseSudokuSolver()
 	{
+		sg = new SudokuGenerator();
 		init();
 	}
 	
@@ -508,6 +509,12 @@ public class PerverseSudokuSolver
 		init();
 	}
 	
+	public void reset(int diff)
+	{
+		this.board = sg.nextBoard(diff);
+		init();
+	}
+	
 	public void init()
 	{
 		possible = new ArrayList[9][9];
@@ -595,4 +602,5 @@ public class PerverseSudokuSolver
 	ArrayList<Integer>[][] possible;
 	boolean[][] found;
 	boolean[][] foundDouble;
+	SudokuSolver sg;
 }
